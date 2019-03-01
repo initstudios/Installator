@@ -1,3 +1,8 @@
+/*The Installator (C) Init Studios 2019. All rights reserved.
+
+We're cool with you using our code. Just abide by the terms set out by the Apache  2.0 license included in the project. :)
+*/
+
 package application;
 	
 import javafx.application.Application;
@@ -28,6 +33,15 @@ public class Installator extends Application {
 			Group root = new Group();
 			ObservableList<Node> list = root.getChildren();
 			Scene scene = new Scene(root,750,450);
+			
+			ImageView logo = new ImageView(new Image("https://initstudios.github.io/initmc.github.io/installator/res/init.png"));
+			logo.setLayoutX(140);
+			logo.setLayoutY(50);
+			logo.setPreserveRatio(true);
+			logo.setSmooth(true);
+			logo.setCache(true);
+			logo.setFitWidth(500);
+			logo.setFitHeight(200);
 			
 			Line border = new Line();
 			border.setStartX(0);
@@ -65,6 +79,9 @@ public class Installator extends Application {
 			list.add(border);
 			list.add(comboBox);
 			list.add(install);
+			list.add(logo);
+			
+			scene.setFill(Color.LIGHTGREY);
 			
 			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(scene);
